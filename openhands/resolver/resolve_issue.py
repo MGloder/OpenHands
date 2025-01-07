@@ -84,6 +84,7 @@ async def complete_runtime(
     If you need to do something in the sandbox to get the correctness metric after
     the agent has run, modify this function.
     """
+    logger.info('::group::completion_func')
     logger.info('-' * 30)
     logger.info('BEGIN Runtime Completion Fn')
     logger.info('-' * 30)
@@ -144,6 +145,7 @@ async def complete_runtime(
     logger.info('-' * 30)
     logger.info('END Runtime Completion Fn')
     logger.info('-' * 30)
+    logger.info('::endgroup::')
     return {'git_patch': git_patch}
 
 
